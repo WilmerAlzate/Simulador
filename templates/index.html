@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Energía Solar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="tituloheader">Simulador de Energía Solar</h1>
+        <nav>
+            <ul>
+                <li><a href="#opcion1">Opción 1</a></li>
+                <li><a href="#opcion2">Opción 2</a></li>
+                <li><a href="#opcion3">Opción 3</a></li>
+                <li><a href="#opcion4">Opción 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="navegacion-lateral">
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#energia-solar">Energía Solar</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#datos-historicos">Datos Históricos</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="introduccion">
+            <h1>Porque es urgente la transición energética?</h1>
+            <p>La transición energética es urgentemente necesaria para evitar un colapso ambiental y social. La quema de combustibles fósiles está acelerando el calentamiento global, provocando desastres naturales, contaminación del aire y crisis de salud pública. Dado que un gran porcentaje de la energía que se consume en el mundo proviene de fuentes no renovables, como el petróleo y el carbón, es esencial avanzar hacia energías renovables.</p>
+        </section>
+
+        <section id="definicion">
+            <h1>Pero que son las energías renovables?</h1>
+            <p>Las energías renovables son fuentes de energía que se obtienen de recursos naturales que se regeneran constantemente como lo son la energía solar, que aprovecha la radiación del sol mediante paneles solares; la energía eólica, que utiliza aerogeneradores para captar la fuerza del viento; la energía hidráulica, que genera electricidad a partir del movimiento del agua en ríos o represas; la biomasa, que utiliza materia orgánica para producir energía; y la energía geotérmica, que aprovecha el calor de la Tierra. Estas fuentes son más sostenibles y tienen un menor impacto ambiental en comparación con los combustibles fósiles, contribuyendo a la reducción de emisiones de gases de efecto invernadero y a la seguridad energética.</p>
+            <img class="Tiposenergia" src="{{ url_for('static', filename='img/3eee4164-9566-483c-816a-aa480ec4729a.webp') }}" alt="Tipos de energía">
+        </section>
+        
+        <section id="definicion2">
+            <h1>No toda energía renovable es limpia!!!</h1>
+            <p>Aunque ninguna energía renovable es completamente limpia, fuentes como la solar, eólica y geotérmica tienen un menor impacto ambiental que los combustibles fósiles. Además, su aplicabilidad local permite que, mediante pequeñas acciones, todos podamos contribuir a cambiar nuestra matriz energética y avanzar hacia un futuro más sostenible. Entre ellas, la que más destaca por su accesibilidad es la:</p>
+            <img class="Tiposenergia" src="{{ url_for('static', filename='img/images.jpeg') }}" alt="Tipos de energía">
+        </section>
+
+        <section id="energia-solar">
+            <h1>Energía Solar</h1>
+            <p>La energía solar es una fuente renovable que se obtiene a partir de la radiación del sol y se transforma en electricidad mediante paneles fotovoltaicos que, por medio de un inversor y el uso de baterías, pueden brindar el suministro de energía necesario para el funcionamiento de un hogar. Además, existe la posibilidad de reinyectar a la red los excedentes de energía generados, permitiendo a los usuarios vender esta electricidad a las compañías distribuidoras y obtener beneficios económicos. Esto fomenta el uso de energías limpias y apoya la transición hacia un sistema energético más sostenible y descentralizado.</p>
+        </section>
+
+        <section id="dashboard">
+            <h1>Componentes de la matriz energética actual.</h1>
+            <p>Hoy en Colombia contamos con una robusta y confiable red de energía, abastecida en su mayoría por fuentes renovables y con bajas emisiones de gases de efecto invernadero, y con un aporte, aunque mínimo, de algunas otras fuentes que queman combustibles fósiles usadas principalmente en momentos donde las demás fuentes no son suficientes, ya sean por cambios climáticos como son las sequías asociadas a fenómenos como el niño, donde la energía obtenida por medio de hidroeléctricas se ve afectada.</p>
+            <img src="{{ url_for('static', filename='img/grafico.png') }}" alt="Gráfico de Distribución de Fuentes de Energía">
+
+
+        </section>
+
+        <section id="simulador">
+            <h1>Simulador</h1>
+            <p>Ingrese su consumo eléctrico total (kWh) para estimar la capacidad instalada de energía renovable y el porcentaje de energía renovable en su consumo.</p>
+            <form id="simulador-form">
+                <label for="consumo">Consumo Eléctrico Total (kWh):</label>
+                <input type="number" id="consumo" required>
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="resultado"></div>
+        </section>
+        <section id="resultado-grafico">
+            <h1>Distribución de Consumo de Energía</h1>
+            <img src="{{ url_for('static', filename='img/grafico_torta.png') }}" alt="Gráfico de Distribución de Consumo de Energía">
+        </section>
+
+        <section id="recursos">
+            <h1>Recursos</h1>
+            <p>Consulta estos recursos adicionales para aprender más sobre energía renovable:</p>
+            <ul>
+                <li><a href="https://www.ejemplo1.com">Recurso 1</a></li>
+                <li><a href="https://www.ejemplo2.com">Recurso 2</a></li>
+                <li><a href="https://www.ejemplo3.com">Recurso 3</a></li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h1>Contacto</h1>
+            <p>Puedes ponerte en contacto conmigo a través de este formulario:</p>
+            <form id="contacto-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/calculo.js') }}"></script>
+</body>
+</html>
